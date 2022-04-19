@@ -20,7 +20,10 @@ a {
 
 :root {
 
-    /* colors */
+  /* header */
+  --header-heigth: 4.5rem;
+
+  /* colors */
     --hue: 159;
 
   /* HSL color mode */
@@ -37,6 +40,18 @@ a {
 
 /* =====  LAYOUT ===== */
 
+#header {
+  border-bottom: 1px solid #E4E4E4;
+  margin-bottom: 2rem;
+  display: flex;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  background-color: var(--body-color);
+}
+
 body {
   font: 400 1rem 'DM sans', sans-serif;
   color: var(--text-color);
@@ -51,11 +66,11 @@ h1 {
 }
 
 nav {
-  border-bottom: 1px solid #E4E4E4;
-  height: 4.5rem;
+  height: var(--header-heigth);
   align-items: center;
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .container {
@@ -74,6 +89,10 @@ section {
 
 }
 
+main{
+  margin-top: var(--header-heigth);
+} 
+
 .logo{
   font: 700 1.31rem 'Poppins', sans-serif;
   color: var(--title-color);
@@ -86,6 +105,9 @@ section {
 /* ==================== */
 
 /* =====  HOME ===== */
+#home {
+  overflow: hidden;
+}
 
 #home .container{
   margin: 0;
@@ -103,6 +125,7 @@ section {
 
 #home .text h1 {
   margin-bottom: 1rem;
+  max-width: 100%;
 }
 
 #home .image {
@@ -149,7 +172,11 @@ section {
 
 .divider-1{
   height: 1px;
-  background: linear-gradient(270deg, #69B99D 0%, rgba(204, 244, 230, 0.34) 100%);
+  background: linear-gradient(
+    270deg,
+    hsla(var(--hue) 159, 36%, 57%, 1) 0%,
+    hsla(var(--hue) 159, 65%, 88%, 0.34) 100%
+    )
 }
 
 /* ==================== */
