@@ -7,11 +7,14 @@
     <meta name="viewport" conte nt="width=device-width, initial-scale=1.0" />
     <title>OriginSix</title>
 
-    <!-- icons -->
+    <!-- ICONS -->
     <link rel="stylesheet" href="assets/fonts/style.css">
 
+    <!-- SWIPER STYLES -->
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css"/>
+
     <!-- STYLES -->
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="style.css" />  
 
     <!-- FONTS -->
     <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -104,41 +107,45 @@
       <div class="divider-1"></div>
 
       <section class="section" id="testimonials">
-        <div class="container grid">
+        <div class="container">
           <header>
             <h2 class="title">Depoimentos de quem já passou por aqui</h2>
           </header>
-            <div class="testimonials">
+            <div class="testimonials swiper">
 
-              <div class="testimonial">
-                <blockquote>
-                  <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
-                  <cite>
-                    <img src="assets/images/Wanessa souza.jpg" alt="">
-                    Wanessa Souza
-                  </cite>
-                </blockquote>
+              <div class="swiper-wrapper">
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
+                    <cite>
+                      <img src="assets/images/Wanessa souza.jpg" alt="">
+                      Wanessa Souza
+                    </cite>
+                  </blockquote>
+                </div>
+
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
+                    <cite>
+                      <img src="assets/images/franciele venega.jpg" alt="">
+                      Franciele venega
+                    </cite>
+                  </blockquote>
+                </div>
+
+                <div class="testimonial swiper-slide">
+                  <blockquote>
+                    <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
+                    <cite>
+                      <img src="assets/images/fabricia fabis.jpg" alt="">
+                      Fabricia Fabis
+                    </cite>
+                  </blockquote>
+                </div>
               </div>
 
-              <div class="testimonial">
-                <blockquote>
-                  <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
-                  <cite>
-                    <img src="assets/images/franciele venega.jpg" alt="">
-                    Franciele venega
-                  </cite>
-                </blockquote>
-              </div>
-
-              <div class="testimonial">
-                <blockquote>
-                  <p><span>&ldquo;</span>Eu sou cliente do Beautysalon há 5 anos e não troco por nada! Certamente meu cabelo mudou muito depois que comecei a tratar somente com produtos naturais e veganos. São profissionais incríveis e qualificados</p>
-                   <cite>
-                    <img src="assets/images/fabricia fabis.jpg" alt="">
-                    Fabricia Fabis
-                  </cite>
-                </blockquote>
-              </div>
+              <div class="swiper-pagination"></div>
 
             </div>
         </div>
@@ -147,6 +154,12 @@
     </main>
 
     <footer></footer>
+
+    <!-- swiper -->
+
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+
+    <!-- main.js -->
 
     <script src="main.js"></script>
   </body>

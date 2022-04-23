@@ -245,6 +245,7 @@ nav.show ul.grid {
 .toggle{
   color: var(--base-color);
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 nav .icon-close {
@@ -426,3 +427,20 @@ nav.show div.icon-close{
   margin-right: 0.5rem;
 }
 
+/* ==================== */
+
+/* swiper-slide */
+
+.swiper-slide {
+  height: auto;
+  padding: 4rem 1rem;
+}
+
+.swiper-pagination-bullet {
+  width: 0.75rem;
+  height: 0.75rem;
+}
+
+.swiper-pagination-bullet-active {
+  background: var(--base-color);
+}
