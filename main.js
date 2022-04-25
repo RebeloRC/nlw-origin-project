@@ -59,3 +59,14 @@ scrollReveal.reveal(
   `,
   { interval: 100 }
 )
+
+/* animação no botão back to top */
+
+const backToTopBtn = document.querySelector('.back-to-top')
+window.addEventListener('scroll', function () {
+  if (window.scrollY >= 560) {
+    backToTopBtn.classList.add('show')
+  } else {
+    backToTopBtn.classList.remove('show')
+  }
+})
