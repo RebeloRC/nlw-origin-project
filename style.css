@@ -37,6 +37,13 @@ ul {
   --text-color: hsl(0 0% 46%);
   --text-color-light: hsl(0 0% 98%);
   --body-color: hsl(0 0% 98%);
+
+  /* fonts */
+  --title-font-size: 1.875rem;
+  --subtitle-font-size: 1rem; 
+
+  --title-font: 'Poppins', sans-serif;
+  --body-font: 'DM sans', sans-serif;
 }
 
 /* ==================== */
@@ -48,14 +55,14 @@ html{
 }
 
 body {
-  font: 400 1rem 'DM sans', sans-serif;
+  font: 400 1rem var(--body-font);
   color: var(--text-color);
   background-color: var(--body-color);
   -webkit-font-smoothing: antialiased;
 }
 
 .title {
-  font: 700 1.875rem 'Poppins', sans-serif;
+  font: 700 1.875rem var(--title-font);
   color: var(--title-color);
   -webkit-font-smoothing: auto;
 }
@@ -68,7 +75,7 @@ body {
   align-items: center;
   padding: 0 2rem;
   border-radius: 0.25rem;
-  font: 500 1rem  "DM sans", sans-serif;
+  font: 500 1rem  var(--body-font);
   transition: background 0.3s;
 }
 
@@ -109,12 +116,16 @@ body {
 }
 
 .section {
-  padding: 5rem 0;
+  padding: calc(5rem + var(--header-heigth)) 0;
 
 }
 
 .section .title {
   margin-bottom: 1rem;
+}
+
+.section .subtitle {
+  font-size: var(--subtitle-font-size);
 }
 
 .section header {
@@ -124,10 +135,6 @@ body {
 section header strong {
   color: var(--base-color);
 }
-
-main{
-  margin-top: calc(var(--header-heigth) + 2rem);
-} 
 
 #header {
   border-bottom: 1px solid #E4E4E4;
@@ -150,7 +157,7 @@ main{
 /* =====  LOGO ===== */
 
 .logo{
-  font: 700 1.31rem 'Poppins', sans-serif;
+  font: 700 1.31rem var(--title-font);
   color: var(--title-color);
 }
 
@@ -475,6 +482,10 @@ footer {
   background-color: var(--base-color);
 }
 
+footer.section {
+  padding: 4rem 0;
+}
+
 footer .logo {
   display: inline-block;
   margin-bottom: 1.5rem;
@@ -493,6 +504,13 @@ footer .social a {
   color: var(--text-color-light);
   font-size: 2rem;
   margin-right: 2rem;
+
+  display: inline-block;
+  transition: 0.3s;
+}
+
+footer .social a:hover {
+  transform: translateY(-6px);
 }
 
 /* back to top */
@@ -503,7 +521,7 @@ footer .social a {
 
   position: fixed;
   right: 1rem;
-  bottom: -10rem;
+  bottom: 1rem;
 
   clip-path: circle();
   padding: 0.5rem;
@@ -516,6 +534,7 @@ footer .social a {
   opacity: 0;
 
   transition: 0.5s;
+  transform: translateY(100%);
 }
 
 .back-to-top.show {
@@ -524,4 +543,124 @@ footer .social a {
 
   right: 1rem;
   bottom: 1rem;
+  transform: translateY(0%);
+}
+
+/* =====  MEDIA QUERIES ===== */
+
+/* extra large devices: 1200 >= */
+@media (min-width: 1200px) {
+  main{
+    margin-top: var(--header-heigth);
+  }
+  .container {
+    max-width: 1120px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .section {
+    padding: 10rem 0;
+  }
+
+  .section header{
+    max-width: 32rem;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .button {
+    height: 3.125rem;
+  }
+
+  /* menu */
+
+  nav .menu {
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+  }
+
+  nav .menu ul {
+    display: flex;
+    gap: 2rem;
+  }
+
+  nav .menu ul li a.title {
+    font: 400 1rem var(--body-font);
+  } 
+
+  nav .icon-menu {
+    display: none;
+  }
+
+  /*home */
+
+  #home .container {
+    grid-auto-flow: column;
+    justify-content: space-between;
+    margin: 0 auto;
+  }
+
+  #home .image {
+    order: 1;
+  }
+
+  #home .text {
+    order: 0;
+    max-width: 24.75rem;
+    text-align: left;
+  }
+
+  /* about */
+
+  #about .container {
+    margin: 0 auto;
+    grid-auto-flow: column;
+  }
+
+  /* services */
+
+ .cards {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .card {
+    padding-left: 3rem;
+    padding-right: 3rem;
+  }
+
+  /* contact */
+
+  #contact .container.grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 16.75rem;
+    align-items: center;
+  }
+
+  #contact .text {
+    max-width: 25.25rem;
+  }
+
+  /* footer */
+
+  footer .container {
+    grid-auto-flow: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  footer .logo {
+    font-size: 2.25rem;
+  }
+
+}
+
+/* large devices: 922 >= */
+@media (min-width: 992px) {
+  :root {
+    --title-font-size: 2.25rem;
+    --subtitle-font-size: 1.125rem;
+  }
 }
